@@ -26,4 +26,4 @@ EXPOSE 80 443
 
 WORKDIR /opt/bin
 
-ENTRYPOINT ["nginx-start.sh"]
+ENTRYPOINT ["/opt/bin/nginx-start.sh"]
