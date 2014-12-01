@@ -6,7 +6,8 @@ WORKDIR /tmp
 
 # Install the version of Nginx in the Debian Jessie repository
 RUN apt-get update -y && \
-    apt-get install -y nginx
+    apt-get install -y nginx && \
+    rm -rF /var/lib/apt/lists/*
 
 # Apply Nginx configuration
 ADD config/nginx.conf /opt/etc/nginx.conf
