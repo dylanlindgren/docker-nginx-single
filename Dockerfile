@@ -19,6 +19,9 @@ RUN chmod u=rwx /opt/bin/nginx-start.sh
 RUN mkdir -p /data/www
 VOLUME ["/data/www"]
 
+RUN mkdir -p /data/log
+VOLUME ["/data/log"]
+
 EXPOSE 80 443
 
 WORKDIR /opt/bin
